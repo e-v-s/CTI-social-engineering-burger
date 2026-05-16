@@ -1,4 +1,4 @@
-# 🍔 OSINT Investigation — Fake Food Delivery Scam (Instagram)
+# OSINT Investigation — Fake Food Delivery Scam (Instagram)
 
 > **Type:** Social Engineering · Financial Fraud  
 > **Platform:** Instagram · Web  
@@ -11,7 +11,7 @@
 
 ## Overview
 
-End-to-end OSINT investigation of an active Instagram-based food delivery scam targeting Brazilian consumers. The operation used inflated follower counts, a well-crafted order landing page, and PIX-only payment to execute financial fraud at scale — with evidence of **at least 11 parallel profiles** using the same template and infrastructure.
+End-to-end OSINT investigation of an active Instagram-based food delivery scam targeting Brazilian consumers. The operation used inflated follower counts, a well-crafted order landing page, and PIX-only payment to execute financial fraud at scale, with evidence of **at least 11 parallel profiles** using the same template and infrastructure.
 
 The investigation was triggered by an X post with 50+ comments from users reporting the same scam. From there, the attacker's Instagram profile, web infrastructure, and related campaigns were fully mapped using open-source tools.
 
@@ -73,7 +73,7 @@ Instagram Sponsored Story
 
 **Red flags:**
 - 283k followers with only 21 posts and zero organic engagement
-- All posts published on a single day — bulk-scheduled or automated
+- All posts published on a single day, bulk-scheduled or automated
 - Comments disabled to prevent victims from warning each other
 - Story background image references a *different* company's branding
 
@@ -94,11 +94,11 @@ Instagram Sponsored Story
 
 The order site was well-crafted and convincing:
 
-- Location selector accepts **any city in Brazil** — in every case, the nearest franchise is listed as exactly 4.5km away
+- Location selector accepts **any city in Brazil**. In every case, the nearest franchise is listed as exactly 4.5km away
 - Displays fake real-time purchase notifications
 - Promotional countdowns to create urgency
 - Collects full name and delivery address
-- **Only accepts PIX** — untraceable by ordinary users
+- **Only accepts PIX**, untraceable by ordinary users
 
 **WAF Evasion:**  
 The application's WAF blocked:
@@ -147,16 +147,16 @@ WHOIS:        Google LLC (GOOGL-2) — 34.128.0.0–34.191.255.255
 ```
 
 **Interpretation:**
-- Zero detections — this infrastructure had not yet been flagged at time of investigation
+- Zero detections, this infrastructure had not yet been flagged at time of investigation
 - Generic cloud IP with no registration data tied to the supposed franchise
 - Recent TLS certificate inconsistent with a company operating since 2018
-- No community votes — completely under the radar
+- No community votes, completely under the radar
 
 ---
 
 ## Related Campaigns
 
-At least **11 Instagram delivery profiles** were identified using the same site template and similar infrastructure — strong evidence of a single automated operation.
+At least **11 Instagram delivery profiles** were identified using the same site template and similar infrastructure, strong evidence of a single automated operation.
 
 | Instagram Handle | Domain | IP | Last TLS Cert | VT Status |
 |-----------------|--------|----|---------------|-----------|
@@ -242,5 +242,3 @@ INFRASTRUCTURE  VICTIM
 | Burp Suite | Request interception (partial — blocked by WAF) |
 
 ---
-
-*Part of the [phishing](https://github.com/e-v-s/phishing) investigation collection.*
